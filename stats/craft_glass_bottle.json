@@ -1,0 +1,8 @@
+{
+    "id": "craft_glass_bottle",
+    "unit": "int",
+    "reader": {
+        "$type": "int",
+        "path": ["minecraft:crafted","minecraft:glass_bottle"]
+    }
+}
