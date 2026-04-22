@@ -3,6 +3,6 @@
     "unit": "int",
     "reader": {
         "$type": "int",
-        "path": ["minecraft:killed","minecraft:player"]
+        "path": ["minecraft:custom","minecraft:player_kills"]
     }
 }
