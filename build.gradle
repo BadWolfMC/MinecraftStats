@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation 'org.json:json:20220924'
-    compileOnly 'org.spigotmc:spigot-api:1.13.2-R0.1-SNAPSHOT'
+    // compileOnly 'org.spigotmc:spigot-api:1.13.2-R0.1-SNAPSHOT'
     compileOnly 'net.skinsrestorer:skinsrestorer-api:15.0.0'
 }
 
@@ -76,6 +76,11 @@ task copyWww(type: Copy) {
 compileJava {
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
+
+    // BadWolfMC: The Bukkit plugin is not used for the stats site.
+    // Excluding it here lets the CLI/web build succeed without resolving old
+    // Spigot/Bungee snapshot dependencies that are no longer available.
+    exclude 'de/pdinklag/mcstats/bukkit/**'
 }
 
 def cliBaseName = 'MinecraftStatsCLI'
